@@ -59,7 +59,7 @@ fun AboutUsScreen() {
 
             // Introduction Text
             Text(
-                text = "Developer: Swapnil Jagannath Patil",
+                text = "Halloooo",
                 style = TextStyle(fontSize = 20.sp, color = Color.Black,fontWeight = FontWeight.Medium),
                 textAlign = TextAlign.Center
             )
