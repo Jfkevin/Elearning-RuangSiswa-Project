@@ -55,12 +55,12 @@ class DashboardViewModel : ViewModel() {
             numberOfLessons = "5",
             duration = "5h 11m",
             videoLinks = listOf(
-                "https://youtu.be/mvRiD68aO9A?si=QBcATjYb1O14JQlY",
-                "https://youtu.be/v16k-k4e2Mk?si=-7hX5h-89ihpUE3P",
-                "https://youtu.be/pALxLOMKyZo?si=igZ3qumWUDgS2SDA",
-                "https://youtu.be/MMhKVHViZYw?si=CQ8xgIaifdUFvtZp",
-                "https://youtu.be/GL_lalGgK0g?si=vMhykVaVvjUZN-W_",
-                "https://youtu.be/M2Isk5nQOpw?si=Rn2-yY71zwelYP6y"
+                "https://youtu.be/Ips5CHxg75A?si=F4eU39A0oEI8PDb5",
+                "https://youtu.be/sDBGL24Tz3U?si=_PSBUtPB3gDreOv5",
+                "https://youtu.be/VLryJRgGzf0?si=9MoAlxIIj-lgtNXT",
+                "https://youtu.be/4d_er9vHDPc?si=6aPZ-oGrnOC6qNt8",
+                "https://youtu.be/wrDXMKJr4mk?si=LZjfn1cpwxlLSvOF",
+                "https://youtu.be/4R80A2JWyuw?si=XttyLKXynCfOvkkx"
             ),
             imageUrl = "https://firebasestorage.googleapis.com/v0/b/elearningapp-d8c38.appspot.com/o/lesson_images%2F1000017585?alt=media&token=5f437606-c398-4fd8-af79-f41454db2a2c",
             chapterNumber = "1",
@@ -75,12 +75,12 @@ class DashboardViewModel : ViewModel() {
             numberOfLessons = "6",
             duration = "3h 33m",
             videoLinks = listOf(
-                "https://youtu.be/_00Nk0S7Mzs?si=WLW-TZadKioZ12po",
-                "https://youtu.be/7Ao0fM96178?si=38rZpINycy8be5E-",
-                "https://youtu.be/Vo4rVM9sFog?si=C8cRWvW6eQi3Al-b",
-                "https://youtu.be/foRIrnxzb1g?si=kV_FZpKf0kg_QHBO",
-                "https://youtu.be/zE1flBriSgs?si=Dhl4DZaMrJlHuTTj",
-                "https://youtu.be/SmFinBAHepE?si=J0lNZG1Omu4KoaOl"
+                "https://youtu.be/GnirVEazGxk?si=_zyKYXOqbpzsZbJy",
+                "https://youtu.be/kkzb6VktnzM?si=cPyCZ7B1_RC4Ud89",
+                "https://youtu.be/HQqCGWxq41g?si=JL9WoHtNcItIZ0zP",
+                "https://youtu.be/DQ_sj6BG370?si=OSEwf4Os8HvK1-0q",
+                "https://youtu.be/4PizJRTDl2o?si=KAOMV1Sa9DATW_dk",
+                "https://youtu.be/CSewmimLiow?si=KCCqK4Y6DorNLPmK"
             ),
             imageUrl = "https://firebasestorage.googleapis.com/v0/b/elearningapp-d8c38.appspot.com/o/lesson_images%2F1000021454?alt=media&token=ebb47e7a-eeb1-435b-b114-efd28dbfb820",
             chapterNumber = "12",
@@ -96,12 +96,12 @@ class DashboardViewModel : ViewModel() {
             numberOfLessons = "6",
             duration = "4h 17m",
             videoLinks = listOf(
-                "https://youtu.be/oHyl2f1ppVg?si=gJAZeK1-Ujvc3oii",
-                "https://youtu.be/ZIqHsaUx3Lk?si=GxHnDbrI97D32MkH",
-                "https://youtu.be/EZjLLXnIMGE?si=MLSPP2odPejU3lKz",
-                "https://youtu.be/O6jADBRGE94?si=kwiYQ8YIWPSpsvY0",
-                "https://youtu.be/gHlBulEOfIk?si=FmU8AjG3TDIJFzq0",
-                "https://youtu.be/4gflZZZ7YHQ?si=s_iVFTZJUQobsuIj"
+                "https://youtu.be/RqIN6ad5xlM?si=fcT3Fazg0pzZhI_S",
+                "https://youtu.be/-yEOCMOTN8M?si=aZvfRMs5qExGBvXq",
+                "https://youtu.be/SEuIHcgVUgk?si=ASGYT183_0jSzXA7",
+                "https://youtu.be/1H1OM5ncbtc?si=j_03A6OexNLk5hLy",
+                "https://youtu.be/lloTlk49tMQ?si=IglUd-E_1yA_nIQz",
+                "https://youtu.be/exyXTbb5m34?si=IVY2a9I_Rn2wckM8"
             ),
             imageUrl = "https://firebasestorage.googleapis.com/v0/b/elearningapp-d8c38.appspot.com/o/lesson_images%2F1000023306?alt=media&token=56aa64c5-6e89-4a22-8db2-42395714b793",
             chapterNumber = "5",
