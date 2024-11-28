@@ -37,9 +37,9 @@ class MainActivity : ComponentActivity() {
                 ) {
                     FirebaseApp.initializeApp(this)
                     //Dashboard()
-                   // MyApp()
+                    // MyApp()
                     //ShowChapters()
-                   // App()
+                    // App()
                     val navController = rememberNavController()
                     val context=applicationContext
                     val lifecycleOwner = this
@@ -95,9 +95,9 @@ class MainActivity : ComponentActivity() {
                             Books(navController)
                         }
                         composable("about_us") {
-                            // Content of your main screen
-                            AboutUsScreen()
+                            AboutUsScreen(navController) // Mengoper navController ke AboutUsScreen
                         }
+
                     }
                 }
             }
