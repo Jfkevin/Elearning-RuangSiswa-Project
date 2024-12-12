@@ -81,7 +81,7 @@ fun SplashScreen(navController: NavHostController) {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "RuangSiswa",
+                text = "Ruang Siswa",
                 color = Color.White,
                 style= TextStyle(
                     fontSize = 44.sp,
