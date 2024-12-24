@@ -21,6 +21,7 @@ import com.elearningapp.ui.views.screens.content.VideoLesson
 import com.elearningapp.ui.views.screens.content.VideoLessons
 import com.elearningapp.ui.views.screens.dashboard.AboutUsScreen
 import com.elearningapp.ui.views.screens.dashboard.Dashboard
+import com.elearningapp.ui.views.screens.hidden.MyApp
 import com.elearningapp.ui.views.screens.splashscreen.SplashScreen
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
@@ -51,6 +52,9 @@ class MainActivity : ComponentActivity() {
                         composable("main_screen") {
                             // Content of your main screen
                             Dashboard(navController)
+                        }
+                        composable("lessonForm") {
+                            MyApp()  // Panggil halaman LessonForm
                         }
                         composable("lessons/{subject}") { backStackEntry ->
                             val subject = backStackEntry.arguments?.getString("subject")

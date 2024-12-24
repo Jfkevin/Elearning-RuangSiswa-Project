@@ -35,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
@@ -258,7 +259,7 @@ fun MyApp() {
     var lessonName by remember { mutableStateOf("") }
     var numberOfLessons by remember { mutableStateOf("") }
     var duration by remember { mutableStateOf("") }
-    var videoLinks by remember { mutableStateOf(listOf<String>()) } // Define videoLinks as a mutableStateOf<List<String>>()
+    var videoLinks by remember { mutableStateOf(listOf<String>()) }
     var threeDAssets by remember { mutableStateOf(listOf<String>()) }
 
     val context = LocalContext.current
@@ -311,3 +312,9 @@ fun MyApp() {
 
 }
 // Function to fetch data from Firebase
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewLessonForm() {
+    MyApp()
+}
