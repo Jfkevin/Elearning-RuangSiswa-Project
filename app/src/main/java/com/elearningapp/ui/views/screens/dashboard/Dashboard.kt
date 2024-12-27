@@ -134,7 +134,7 @@ fun Dashboard(navcontroller: NavController) {
                     icon = {
                         Icon(
                             Icons.Filled.Menu,
-                            contentDescription = "Lessons",
+                            contentDescription = "Backend",
                             tint = if (selectedTab == 4) blue else Color.Gray
                         )
                     },
@@ -142,7 +142,7 @@ fun Dashboard(navcontroller: NavController) {
                     selected = selectedTab == 4,
                     onClick = {
                         selectedTab = 4
-                        navcontroller.navigate("lesson_form")
+                        navcontroller.navigate("LessonForm")
                     }
                 )
             }
