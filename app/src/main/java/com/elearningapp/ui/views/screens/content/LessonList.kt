@@ -33,16 +33,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.elearningapp.R
 import com.elearningapp.data.Lesson
 import com.elearningapp.viewmodel.DashboardViewModel
+import com.elearningapp.R
 
 @Composable
 fun LessonList(lesson: String,navController: NavController) {
     var lessons by remember { mutableStateOf<List<Lesson>>(emptyList()) }
     val viewModel: DashboardViewModel = viewModel()
 
-    // Fetch physics lessons when the composable is first launched
     LaunchedEffect(Unit) {
         viewModel.fetchLessons(subjectName = lesson,
             onLessonsFetched = { allLessons ->
@@ -94,7 +93,6 @@ fun LessonList(lesson: String,navController: NavController) {
                         .height(200.dp)
                 )
             }
-
             LazyColumn(
                 modifier = Modifier
                     .padding(top = 20.dp, bottom = 16.dp)

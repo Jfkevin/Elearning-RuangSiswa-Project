@@ -22,7 +22,7 @@ import com.elearningapp.data.AssetsClass
 import com.elearningapp.data.Lesson
 
 @Composable
-fun AssetCard(asset: AssetsClass,navController: NavController) {
+fun AssetCard(asset: AssetsClass, navController: NavController) {
     Card(
         modifier = Modifier
             .padding(2.dp, 5.dp, 2.dp, 8.dp)

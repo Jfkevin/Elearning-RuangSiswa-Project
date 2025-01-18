@@ -43,7 +43,7 @@ fun Books(navController: NavController) {
         R.drawable.bukukimia
     )
 
-    val selectedTab = remember { mutableStateOf(1) } // Default to Books tab
+    val selectedTab = remember { mutableStateOf(1) }
 
     Scaffold(
         bottomBar = {
@@ -63,7 +63,7 @@ fun Books(navController: NavController) {
                     selected = selectedTab.value == 0,
                     onClick = {
                         selectedTab.value = 0
-                        navController.navigate("main_screen")
+                        navController.navigate("dashboard")
                     }
                 )
                 BottomNavigationItem(
