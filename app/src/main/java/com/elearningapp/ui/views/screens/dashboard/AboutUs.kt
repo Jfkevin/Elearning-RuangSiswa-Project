@@ -9,10 +9,15 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AdminPanelSettings
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -27,15 +32,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.elearningapp.R
 import com.elearningapp.ui.theme.blue
+import com.elearningapp.ui.theme.lightBlue
 
 @Composable
 fun AboutUsScreen(navController: NavController) {
-    var selectedTab by remember { mutableStateOf(3) } // Default tab for About Us is 3.
+    var selectedTab by remember { mutableStateOf(3) }
 
     Scaffold(
         bottomBar = {
@@ -56,8 +64,8 @@ fun AboutUsScreen(navController: NavController) {
                     onClick = {
                         if (selectedTab != 0) {
                             selectedTab = 0
-                            navController.navigate("main_screen") { // Correct route here
-                                popUpTo("main_screen") { inclusive = true } // Prevents multiple instances of the screen
+                            navController.navigate("dashboard") {
+                                popUpTo("dashboard") { inclusive = true }
                             }
                         }
                     }
@@ -123,7 +131,6 @@ fun AboutUsScreen(navController: NavController) {
                     .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Text Judul
                 Text(
                     text = stringResource(id = R.string.judul),
                     style = TextStyle(
@@ -134,8 +141,6 @@ fun AboutUsScreen(navController: NavController) {
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(20.dp))
-
-                // Text Place
                 Text(
                     text = stringResource(id = R.string.place),
                     style = TextStyle(
@@ -146,8 +151,6 @@ fun AboutUsScreen(navController: NavController) {
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-
-                // Text Anggota Tim
                 Text(
                     text = stringResource(id = R.string.anggotaTim),
                     style = TextStyle(
@@ -157,8 +160,6 @@ fun AboutUsScreen(navController: NavController) {
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-
-                // Row for first two images
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
@@ -172,7 +173,6 @@ fun AboutUsScreen(navController: NavController) {
                             .clip(CircleShape)
                             .background(Color.Gray)
                     )
-
                     Image(
                         painter = painterResource(id = R.drawable.genadi),
                         contentDescription = "About Us Image 2",
@@ -183,10 +183,7 @@ fun AboutUsScreen(navController: NavController) {
                             .background(Color.Gray)
                     )
                 }
-
                 Spacer(modifier = Modifier.height(8.dp))
-
-                // Row for next two images
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
@@ -213,7 +210,53 @@ fun AboutUsScreen(navController: NavController) {
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
+                Button(
+                    onClick = {
+                        navController.navigate("LessonForm")
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                        .height(50.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = lightBlue)
+                ) {
+                    Icon(
+                        Icons.Filled.AdminPanelSettings,
+                        contentDescription = "Halaman Admin",
+                        modifier = Modifier.padding(end = 8.dp)
+                    )
+                    Text(text = "Masuk Halaman Update Lesson")
+                }
+                Button(
+                    onClick = {
+                        navController.navigate("login_screen") {
+                            popUpTo(0)
+                        }
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                        .height(50.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
+                ) {
+                    Icon(
+                        Icons.Filled.Logout,
+                        contentDescription = "Logout",
+                        modifier = Modifier.padding(end = 8.dp),
+                        tint = Color.White
+                    )
+                    Text(
+                        text = "Logout",
+                        style = TextStyle(color = Color.White)
+                    )
+                }
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewAboutUsScreen() {
+    AboutUsScreen(navController = rememberNavController())
 }

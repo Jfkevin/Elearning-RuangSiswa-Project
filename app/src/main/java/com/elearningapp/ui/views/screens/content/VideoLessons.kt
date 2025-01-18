@@ -47,7 +47,6 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
-import com.elearningapp.R
 import com.elearningapp.ui.theme.blue
 import com.elearningapp.viewmodel.DashboardViewModel
 import java.io.File
@@ -89,7 +88,6 @@ fun VideoLessons(
             ),
         ) {
             Column {
-                // Tabs
                 Box {
                     Box {
                         AsyncImage(
@@ -158,7 +156,6 @@ fun VideoLessons(
                                     modifier = Modifier
                                         .padding(2.dp, 15.dp, 2.dp, 8.dp)
                                         .clickable {
-                                            // Handle click
                                         }
                                         .fillMaxWidth(),
                                     elevation = CardDefaults.cardElevation(
@@ -212,7 +209,6 @@ fun VideoLessons(
                         }
                     }
                 } else {
-
                     val filteredAssets by remember { derivedStateOf { viewModel.assetsList.value.filter { it.chapterName == chapter } } }
                     if (filteredAssets.isNotEmpty()) {
                         LazyColumn(

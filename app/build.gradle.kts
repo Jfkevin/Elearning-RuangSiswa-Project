@@ -1,6 +1,4 @@
 plugins {
-
-    //Firebase
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
@@ -54,7 +52,7 @@ android {
 }
 
 dependencies {
-
+    implementation("com.google.android.gms:play-services-auth:20.6.0")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
@@ -63,6 +61,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation ("com.google.firebase:firebase-auth-ktx:21.0.8")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -70,11 +70,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-
-    //Firebase
-    implementation("com.google.firebase:firebase-storage:20.3.0") //Storage
-    implementation("com.google.firebase:firebase-database-ktx:20.3.1") //Realtime Database
-
 
     // Jetpack Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
@@ -87,6 +82,8 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.6.5")
     implementation("androidx.compose.material:material:1.6.4")
     implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    implementation("com.google.firebase:firebase-database-ktx:20.3.1")
     implementation("androidx.activity:activity-compose:1.4.0")
 
     //AR
@@ -99,5 +96,4 @@ dependencies {
 
     //WebView
     implementation ("androidx.webkit:webkit:1.4.0")
-
 }
